@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- Chosen Palette: Retro Peach & Coral (Main Background: #F7EFE5, Accent: #F29479, Shadow: #E86A50) -->
+<!-- Application Structure Plan: Single-page link hub. Replicates the existing `index.html` header/footer for brand consistency. The main content is a 'kitsch'-styled grid of links pointing to various parts of the app's GitHub repository, fulfilling the user's request for a 'link collection' in the app's visual style. -->
+<!-- Visualization & Content Choices: No visualizations. Content is a structured list of links. Presentation uses styled HTML/Tailwind (btn-3d-kitsch, card-kitsch from index.html) to create interactive link cards that match the app's aesthetic. Interaction is simple navigation via <a> tags. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toniverse - GitHub 소스 코드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F7EFE5;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #4A4A4A;
+        }
+        h1, h2, h3, .font-jua {
+            font-family: 'Jua', sans-serif;
+        }
+        .btn-3d-kitsch {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Jua', sans-serif;
+            font-size: 1.125rem;
+            color: #4A4A4A;
+            background-color: #F29479;
+            border: 2px solid #4A4A4A;
+            border-radius: 0.5rem;
+            box-shadow: 4px 4px 0 0 #E86A50;
+            transform: translate(0, 0);
+            transition: all 0.15s ease-out;
+            text-decoration: none;
+        }
+        .btn-3d-kitsch:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 0 #E86A50;
+        }
+        .btn-3d-kitsch:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0 0 #E86A50;
+        }
+        .card-kitsch {
+            background-color: #FFFBF5;
+            border: 2px solid #F29479;
+            border-radius: 0.75rem;
+            box-shadow: 6px 6px 0 0 #E86A50;
+        }
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            color: #4A4A4A;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #F29479;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover {
+            color: #E86A50;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-[#F7EFE5] border-b-2 border-[#F29479] sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true" alt="Toniverse Logo" class="h-10 w-10">
+                <span class="font-jua text-3xl text-[#E86A50]">Toniverse</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">홈</a>
+                <a href="links.html" class="nav-link">소스 코드</a>
+                <a href="privacy.html" class="nav-link">개인정보처리방침</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-[#E86A50] focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
+            <a href="index.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">홈</a>
+            <a href="links.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">소스 코드</a>
+            <a href="privacy.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">개인정보처리방침</a>
+        </div>
+    </header>
+
+    <main class="bg-[#F7EFE5] py-16 md:py-24">
+        <section class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="font-jua text-5xl md:text-6xl text-[#E86A50] mb-6">
+                    GitHub 소스 코드
+                </h1>
+                <p class="text-xl text-gray-600 font-bold mb-12">
+                    Toniverse를 만드는 데 사용된 기술이 궁금하신가요?<br>
+                    저희는 언제나 투명하게 코드를 공개하고 피드백을 환영합니다!
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    
+                    <a href="https://github.com/An0jin/WarmCoolProject" target="_blank" rel="noopener noreferrer" class="card-kitsch p-8 flex flex-col items-center justify-center text-center hover:transform hover:-translate-y-1 transition-transform duration-200">
+                        <span class="text-6xl mb-4">📂</span>
+                        <h3 class="font-jua text-3xl text-[#E86A50] mb-3">메인 리포지토리</h3>
+                        <p class="text-gray-500 font-medium mb-6">
+                            모든 코드의 중심! 프로젝트의 메인 GitHub 페이지로 이동합니다.
+                        </p>
+                        <span class="btn-3d-kitsch !bg-[#F29479] !shadow-[#E86A50]">방문하기 &rarr;</span>
+                    </a>
+                    
+                    <a href="https://github.com/An0jin/WarmCoolUnity" target="_blank" rel="noopener noreferrer" class="card-kitsch p-8 flex flex-col items-center justify-center text-center hover:transform hover:-translate-y-1 transition-transform duration-200">
+                        <span class="text-6xl mb-4">📱</span>
+                        <h3 class="font-jua text-3xl text-[#E86A50] mb-3">Unity (앱) 코드</h3>
+                        <p class="text-gray-500 font-medium mb-6">
+                            여러분의 톤을 진단하는 앱의 핵심 로직과 UI 코드를 살펴보세요.
+                        </p>
+                        <span class="btn-3d-kitsch !bg-[#F29479] !shadow-[#E86A50]">코드 보기 &rarr;</span>
+                    </a>
+
+                    <a href="https://github.com/An0jin/WarmCoolFastapi" target="_blank" rel="noopener noreferrer" class="card-kitsch p-8 flex flex-col items-center justify-center text-center hover:transform hover:-translate-y-1 transition-transform duration-200">
+                        <span class="text-6xl mb-4">☁️</span>
+                        <h3 class="font-jua text-3xl text-[#E86A50] mb-3">백엔드 (서버) 코드</h3>
+                        <p class="text-gray-500 font-medium mb-6">
+                            진단 결과와 커뮤니티 데이터를 처리하는 서버의 코드가 궁금하다면?
+                        </p>
+                        <span class="btn-3d-kitsch !bg-[#F29479] !shadow-[#E86A50]">코드 보기 &rarr;</span>
+                    </a>
+                    
+                    <a href="https://github.com/An0jin/WarmCoolDataset" target="_blank" rel="noopener noreferrer" class="card-kitsch p-8 flex flex-col items-center justify-center text-center hover:transform hover:-translate-y-1 transition-transform duration-200">
+                        <span class="text-6xl mb-4">🖼️</span>
+                        <h3 class="font-jua text-3xl text-[#E86A50] mb-3">데이터 수집</h3>
+                        <p class="text-gray-500 font-medium mb-6">
+                            AI가 학습한 데이터가 궁금하다면?
+                        </p>
+                        <span class="btn-3d-kitsch !bg-[#F29479] !shadow-[#E86A50]">코드 보기 &rarr;</span>
+                    </a>
+                    
+
+                    <a href="https://github.com/An0jin/WarmCoolYOLO" target="_blank" rel="noopener noreferrer" class="card-kitsch p-8 flex flex-col items-center justify-center text-center hover:transform hover:-translate-y-1 transition-transform duration-200">
+                        <span class="text-6xl mb-4">🤖</span>
+                        <h3 class="font-jua text-3xl text-[#E86A50] mb-3">딥러닝 코드</h3>
+                        <p class="text-gray-500 font-medium mb-6">
+                            AI만드는 과정이 궁금하다면?
+                        </p>
+                        <span class="btn-3d-kitsch !bg-[#F29479] !shadow-[#E86A50]">코드 보기 &rarr;</span>
+                    </a>
+                    
+
+                    <a href="https://github.com/An0jin/WarmCoolSQL" target="_blank" rel="noopener noreferrer" class="card-kitsch p-8 flex flex-col items-center justify-center text-center hover:transform hover:-translate-y-1 transition-transform duration-200">
+                        <span class="text-6xl mb-4"> 🗃️</span>
+                        <h3 class="font-jua text-3xl text-[#E86A50] mb-3">데이터베이스</h3>
+                        <p class="text-gray-500 font-medium mb-6">
+                            어떤 데이터를 저장하는지 궁금하다면?
+                        </p>
+                        <span class="btn-3d-kitsch !bg-[#F29479] !shadow-[#E86A50]">코드 보기 &rarr;</span>
+                    </a>
+                    
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#F7EFE5] border-t border-[#F29479] py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500 font-bold">
+            &copy; 2025 Toniverse. 진짜 내 톤을 찾아주는 뷰티 놀이터.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            document.querySelectorAll('a[href="index.html"], a[href="github.html"], a[href="privacy.html"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

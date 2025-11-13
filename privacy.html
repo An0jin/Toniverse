@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" class="scroll-smooth">
-<head>
+    <head>
+        <link rel="icon" href="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toniverse - 개인정보 처리 방침</title>
@@ -35,29 +36,33 @@
 
     <header class="bg-[#F7EFE5] border-b-2 border-[#F29479] sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div>
-                <a href="index.html" class="text-3xl font-jua text-[#E86A50]">
-                    Toniverse
-                </a>
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true" alt="Toniverse Logo" class="h-10 w-10">
+                <span class="font-jua text-3xl text-[#E86A50]">Toniverse</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">홈</a>
+                <a href="links.html" class="nav-link">소스 코드</a>
+                <a href="privacy.html" class="nav-link">개인정보처리방침</a>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-[#E86A50] font-bold">홈</a>
-                <a href="privacy.html" class="text-[#E86A50] font-extrabold">개인정보처리방침</a>
-            </div>
+
             <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <button id="menu-btn" class="text-[#E86A50] focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </nav>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] pb-4">
-            <a href="index.html" class="block px-8 py-2 text-gray-700 hover:bg-[#F29479] hover:text-white font-bold">홈</a>
-            <a href="privacy.html" class="block px-8 py-2 text-[#E86A50] bg-white font-extrabold">개인정보처리방침</a>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
+            <a href="index.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">홈</a>
+            <a href="links.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">소스 코드</a>
+            <a href="privacy.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">개인정보처리방침</a>
         </div>
     </header>
+
 
     <main>
         <section id="privacy-policy" class="py-16 md:py-24">
