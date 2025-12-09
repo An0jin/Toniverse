@@ -10,97 +10,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap"
         rel="stylesheet">
-
-    <!-- Chosen Palette: Toneiverse Standard (Background: #F7EFE5, Accent: #F29479, Shadow: #E86A50) -->
-    <!-- Application Structure Plan: 
-         1. Header: Matches existing app branding.
-         2. Hero Section: Clear copyright statement.
-         3. Two-Column Grid: Permitted vs. Prohibited.
-         4. Conditional Paid License: Hybrid Model (Hourly Rate + Daily Cap).
-         5. Legal Consequences: Serious warning section.
-         6. Technical Contribution: GitHub PR rules.
-         7. Footer: Standard app footer.
-    -->
-    <!-- Visualization & Content Choices: 
-         - Finalized text for "Special Professor Permission" as requested.
-         - Included clauses for "No-Pay Lecture", "Charity", and "Student Projects".
-         - Hybrid Pricing Model confirmed.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
-    <style>
-        /* Replicating style.css for standalone preview consistency */
-        body {
-            background-color: #F7EFE5;
-            color: #333333;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .font-jua {
-            font-family: 'Jua', sans-serif;
-        }
-
-        /* Kitsch Box Style */
-        .card-kitsch {
-            background-color: white;
-            border: 2px solid #4A4A4A;
-            border-radius: 1rem;
-            box-shadow: 6px 6px 0 0 #E86A50;
-            /* Orange Shadow */
-            transition: all 0.2s ease-in-out;
-        }
-
-        .card-kitsch:hover {
-            transform: translateY(-2px);
-            box-shadow: 8px 8px 0 0 #E86A50;
-        }
-
-        /* Button Style */
-        .btn-3d-kitsch {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            font-family: 'Jua', sans-serif;
-            font-size: 1.125rem;
-            color: #4A4A4A;
-            background-color: #F29479;
-            border: 2px solid #4A4A4A;
-            border-radius: 0.5rem;
-            box-shadow: 4px 4px 0 0 #E86A50;
-            transition: all 0.15s ease-out;
-            cursor: pointer;
-        }
-
-        .btn-3d-kitsch:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0 0 #E86A50;
-        }
-
-        .btn-3d-kitsch:active {
-            transform: translate(4px, 4px);
-            box-shadow: 0 0 0 0 #E86A50;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="antialiased flex flex-col min-h-screen">
 
 
-
     <script src="navbar.js"></script>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
-        <a href="index.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">홈</a>
-        <a href="team.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">팀원 소개</a>
-        <a href="links.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">자료 모음</a>
-    </div>
-    </header>
 
     <main class="flex-grow container mx-auto px-4 py-12 max-w-5xl">
 
@@ -129,87 +46,94 @@
             </button>
         </div>
 
-        <!-- Permitted vs Prohibited Lists (Grid Layout) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 
-            <!-- Permitted Use -->
             <div class="bg-white border-2 border-green-500 rounded-xl p-6 shadow-[4px_4px_0_0_#22c55e]">
                 <div class="flex items-center mb-4 border-b pb-2 border-green-100">
                     <span class="text-2xl mr-2">✅</span>
-                    <h3 class="font-jua text-xl text-green-700">허가된 사용 범위 (무료)</h3>
+                    <h3 class="font-jua text-xl text-green-700">제1장 무료 이용 허가 범위 (대상자 한정)</h3>
                 </div>
                 <ul class="space-y-4 text-gray-700">
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>교육 및 강의:</strong> 경복대 빅데이터과 교수님 및 관련 강의 자료 활용 (출처 명시 필수).
+                            <strong>제1조 (경복대 빅데이터학과 교원):</strong> 본 학과 소속 교원은 교내외 강의(타 기관 출강 포함)에서 자료를 무상으로 활용할 수 있다.
+                            <br><span class="text-sm text-green-700">※ 단, 사용 전 <strong>제작자에게 통보</strong>하고 <strong>출처를
+                                    표기</strong>하여야 한다.</span>
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>타과 교수님 특별 허가:</strong> 경복대 빅데이터과 23학번을 지도하셨으며, 제작자, 경복대 빅데이터학과 교수랑 함께 식사를 하신 타과 교수님의
-                            강의 자료 활용.
+                            <strong>제2조 (특별 연고자에 대한 허가):</strong> 다음 각 호에 해당하는 자는 교내외 강의에서 자료를 무상으로 활용할 수 있다.
+                            <ul class="list-disc list-inside ml-2 mt-1 text-sm text-gray-600">
+                                <li>경복대학교 빅데이터학과 23학번 지도 이력이 있는 자</li>
+                                <li>제작자 및 빅데이터학과 교수와 동석하여 식사한 자</li>
+                            </ul>
+                            <span class="text-sm text-green-700">※ 단, 사용 전 <strong>제작자에게 통보</strong>하고 <strong>출처를
+                                    표기</strong>하여야 한다.</span>
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>무보수(무수익) 강의:</strong> 강사가 해당 강의를 통해 강의료, 자문료 등 어떠한 금전적 이익도 취하지 않는 경우 (사전 허락 불필요).
+                            <strong>제3조 (무보수 강의):</strong> 강사가 강의료 등 어떠한 금전적 이득도 취하지 않는 경우 (사전 통지 면제).
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>소외계층 무료 봉사 강의:</strong> 보육원, 양로원 등 사회 취약 계층을 대상으로 하는 <strong>완전 무료 봉사 강의</strong>
-                            (자유 사용).
+                            <strong>제4조 (학술 및 과제 제출):</strong> 학생의 캡스톤 디자인, 졸업작품 등 과제물 제출 목적이며 <strong>'Toneiverse 클론
+                                코딩'</strong>임을 명시한 경우 (사전 통지 면제).
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>학생 과제 및 캡스톤:</strong> 캡스톤 디자인, 졸업작품 등 학생 프로젝트에서 <strong>'Toneiverse 클론
-                                코딩'</strong>임을 명확히 밝히는 경우 (사전 허락 불필요).
+                            <strong>제5조 (개인 연구):</strong> 영리 목적이 없는 개인의 단순 학습 및 코드 분석.
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>개인 학습:</strong> 개인적인 연구 및 코드 분석 목적의 참고.
+                            <strong>제6조 (오픈소스 기여):</strong> 비영리 목적의 기술적 개선 및 기여(Pull Request).
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-green-500">✔</span>
                         <span>
-                            <strong>오픈소스 기여:</strong> 비영리 목적의 기술적 기여 (PR).
+                            <strong>제7조 (인플루언서 및 크리에이터):</strong> 유튜브, 틱톡, 인스타그램 등 소셜 미디어에서의 리뷰, 사용기, 챌린지 콘텐츠 제작 목적 (광고
+                            수익 창출 허용).
+                            <br><span class="text-sm text-green-700">※ 단, 영상 설명란 또는 댓글에 'Toneiverse' 명칭 또는 다운로드 링크 필수
+                                기재.</span>
                         </span>
                     </li>
                 </ul>
             </div>
 
-            <!-- Prohibited Use -->
             <div class="bg-white border-2 border-red-500 rounded-xl p-6 shadow-[4px_4px_0_0_#ef4444]">
                 <div class="flex items-center mb-4 border-b pb-2 border-red-100">
                     <span class="text-2xl mr-2">❌</span>
-                    <h3 class="font-jua text-xl text-red-600">엄격히 금지되는 행위</h3>
+                    <h3 class="font-jua text-xl text-red-600">제2장 이용 제한 및 금지 사항</h3>
                 </div>
                 <ul class="space-y-4 text-gray-700">
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-red-500">⛔</span>
                         <span>
-                            <strong>상업적 이용:</strong> 모든 기관 및 개인의 영리 목적 사용 불가. (유료 강의, 수익 창출형 유튜브 포함)
+                            <strong>제8조 (영리 목적 사용 금지):</strong> 사전 서면 합의 없는 상업적 이용(유료 강의 등)을 불허함. <br>(단, 제7조에 명시된 크리에이터
+                            활동은 예외로 함)
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-red-500">⛔</span>
                         <span>
-                            <strong>무단 배포:</strong> 코드를 수정하여 별도의 앱, 웹, 프로그램 등으로 재배포하는 행위.
+                            <strong>제9조 (재배포 금지):</strong> 코드를 수정 또는 가공하여 별도의 애플리케이션, 웹 서비스 등으로 재배포하는 행위.
                         </span>
                     </li>
                     <li class="flex items-start">
                         <span class="mr-2 mt-1 text-red-500">⛔</span>
                         <span>
-                            <strong>무단 복제:</strong> 허가 범위를 벗어난 복사 및 사용.
+                            <strong>제10조 (복제 및 전송 제한):</strong> 허가된 범위를 초과하는 무단 복제 및 공중 송신 행위.
                         </span>
                     </li>
                 </ul>
@@ -220,31 +144,31 @@
         <div class="bg-blue-50 border-2 border-blue-500 rounded-xl p-6 mb-12 shadow-[4px_4px_0_0_#3b82f6]">
             <div class="flex items-center mb-4">
                 <span class="text-2xl mr-2">💰</span>
-                <h3 class="font-jua text-xl text-blue-800">조건부 유료 라이선스 (예외 조항)</h3>
+                <h3 class="font-jua text-xl text-blue-800">제 3장 조건부 유료 라이선스 (예외 조항)</h3>
             </div>
             <p class="text-gray-700 mb-4 font-bold">
-                위의 무료 허가 조건(무보수, 학생, 봉사 등)에 해당하지 않으며, 강의료 등 수익이 발생하는 경우:
+                제11조 (유상 이용의 정의) 제1조 내지 제7조에 해당하지 않으며, 강의료 등 수익이 발생하는 경우 본 조항이 적용된다.
             </p>
             <div class="bg-white p-4 rounded-lg border border-blue-200">
                 <ul class="list-disc list-inside text-gray-700 space-y-3">
                     <li class="border-b border-gray-100 pb-2">
-                        <strong>사전 고지 의무:</strong> 사용 전 반드시 제작자에게 이메일로 Toneiverse 활용 사실을 통보해야 합니다.
+                        <strong>사전 통지 의무:</strong> 이용 개시 전, 저작권자에게 전자우편을 통해 활용 계획을 서면 통지하여야 한다.
                     </li>
 
                     <!-- Hybrid Pricing Structure -->
                     <li class="flex flex-col md:flex-row md:items-center">
-                        <span class="font-bold w-32">🔹 시간당 요금:</span>
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold">30,000원</span>
-                        <span class="text-sm text-gray-500 ml-2">(1~6시간 미만 단기 강의 시 유리)</span>
+                        <span class="font-bold w-32">시간당 요금:</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold">금 30,000원 / 시간</span>
+                        <span class="text-sm text-gray-500 ml-2">(6시간 미만 단기 이용 시 적용)</span>
                     </li>
                     <li class="flex flex-col md:flex-row md:items-center">
-                        <span class="font-bold w-32">🔹 1일 상한선:</span>
-                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded font-bold">200,000원</span>
-                        <span class="text-sm text-gray-500 ml-2">(7시간 이상 사용 시 자동 적용, 전일 할인)</span>
+                        <span class="font-bold w-32">1일 상한선:</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded font-bold">금 200,000원 / 일</span>
+                        <span class="text-sm text-gray-500 ml-2">(7시간 이상 이용 시 자동 적용)</span>
                     </li>
 
                     <li class="text-sm text-gray-500 mt-2 pt-2 border-t border-gray-100">
-                        * 사전 협의 없이 사용하다 적발될 경우, 위약금을 포함하여 통상 비용의 3배를 청구합니다.
+                        사전 협의 없는 무단 사용 적발 시, 통상 이용료의 3배에 해당하는 위약벌이 부과된다.
                     </li>
                 </ul>
             </div>
@@ -258,11 +182,11 @@
             </div>
 
             <h3 class="font-jua text-2xl text-red-800 mb-6 flex items-center relative z-10">
-                <span class="mr-2">⚖️</span> 위반 시 법적 제재 및 불이익
+                <span class="mr-2">⚖️</span> 제4장 법적 책임 및 권리 행사 고지
             </h3>
 
             <p class="text-red-900 font-bold mb-6 text-lg border-l-4 border-red-600 pl-4 relative z-10">
-                본 고지문에 명시된 허용 범위를 벗어난 무단 사용, 배포, 상업적 이용이 적발될 경우, 별도의 경고 조치 없이 즉시 다음과 같은 강력한 법적 절차가 진행됩니다.
+                본 약관의 허용 범위를 일탈한 무단 도용, 배포 및 영리적 이용 적발 시, 별도의 최고 절차 없이 즉각적인 법적 조치가 단행된다.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
@@ -302,20 +226,19 @@
         <!-- Technical Contribution Section -->
         <div class="card-kitsch p-8 mb-12">
             <h3 class="font-jua text-2xl text-[#E86A50] mb-4 flex items-center">
-                <span class="mr-2">💻</span> 기술적 기여 가이드라인 (GitHub PR)
+                <span class="mr-2">💻</span> 제5장 기술 기여 및 권리 귀속 (GitHub PR)
             </h3>
             <p class="mb-4 text-gray-700">
-                Toneiverse는 개발자들의 건전한 학습과 성장을 응원합니다. 코드를 분석하고 개선하고 싶으신가요? <br>
-                다음 규칙을 준수한다면 Pull Request(PR)는 언제나 환영합니다!
+                Toneiverse는 오픈소스 생태계를 지향합니다. 코드의 개선 및 발전을 위한 기여(Contribution)는 아래 규정에 따라 수행되어야 합니다.
             </p>
 
             <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
                 <h4 class="font-bold text-gray-800 mb-2">Contribution Rules:</h4>
                 <ul class="list-disc list-inside text-gray-600 space-y-1">
-                    <li>버그 수정, 알고리즘 개선, 리팩토링 목적이어야 합니다.</li>
-                    <li><strong>반드시 출처를 명시</strong>해야 합니다.</li>
-                    <li>제출된 코드의 저작권은 원저작자(안영진)에게 귀속됨에 동의하는 것으로 간주합니다.</li>
-                    <li>리포지토리(Repository) 포크(Fork) 및 학습용 저장소 업로드는 가능합니다.</li>
+                    <li>기여의 목적은 버그 수정, 성능 최적화, 리팩토링 등 공익적 기술 개선에 한한다.</li>
+                    <li><strong>원저작자 명시:</strong> 모든 기여 내용에는 원천 기술의 출처를 명확히 표기해야 한다.</li>
+                    <li><strong>권리 양도:</strong> 제출(PR)된 코드의 저작재산권은 원저작자(안영진)에게 귀속되는 것에 동의한 것으로 간주한다.</li>
+                    <li>저장소의 포크(Fork) 및 개인 학습용 미러링은 허용되나, 재배포는 금지한다.</li>
                 </ul>
             </div>
         </div>
