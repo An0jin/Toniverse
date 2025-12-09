@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html#features" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">주요 기능</a>
                 <a href="team.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">팀원 소개</a>
                 <a href="links.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">자료 모음</a>
                 <a href="privacy.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">개인정보처리방침</a>
-                <a href="https://github.com/An0jin/WarmCoolUnity/releases"
+                <a href="copyRight.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">저작권</a>
+                <a href="https://play.google.com/store/apps/details?id=com.an0jin.Toneiverse"
                     class="bg-[#F29479] text-white px-6 py-2 rounded-full font-bold hover:bg-[#E86A50] transition-colors shadow-md">
                     앱 다운로드
                 </a>
@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
             <div class="px-6 py-4 space-y-4 flex flex-col">
-                <a href="index.html#features" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">주요 기능</a>
                 <a href="team.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">팀원 소개</a>
                 <a href="links.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">자료 모음</a>
                 <a href="privacy.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">개인정보처리방침</a>
-                <a href="https://github.com/An0jin/WarmCoolUnity/releases"
+                <a href="copyRight.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">저작권</a>
+                <a href="https://play.google.com/store/apps/details?id=com.an0jin.Toneiverse"
                     class="bg-[#F29479] text-white px-6 py-2 rounded-full font-bold hover:bg-[#E86A50] transition-colors shadow-md text-center">
                     앱 다운로드
                 </a>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toneiverse - 저작권 및 사용 고지</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Chosen Palette: Toneiverse Standard (Background: #F7EFE5, Accent: #F29479, Shadow: #E86A50) -->
+    <!-- Application Structure Plan: 
+         1. Header: Matches existing app branding.
+         2. Hero Section: Clear copyright statement.
+         3. Two-Column Grid: Permitted vs. Prohibited.
+         4. Conditional Paid License: Hybrid Model (Hourly Rate + Daily Cap).
+         5. Legal Consequences: Serious warning section.
+         6. Technical Contribution: GitHub PR rules.
+         7. Footer: Standard app footer.
+    -->
+    <!-- Visualization & Content Choices: 
+         - Finalized text for "Special Professor Permission" as requested.
+         - Included clauses for "No-Pay Lecture", "Charity", and "Student Projects".
+         - Hybrid Pricing Model confirmed.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        /* Replicating style.css for standalone preview consistency */
+        body {
+            background-color: #F7EFE5;
+            color: #333333;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-jua {
+            font-family: 'Jua', sans-serif;
+        }
+
+        /* Kitsch Box Style */
+        .card-kitsch {
+            background-color: white;
+            border: 2px solid #4A4A4A;
+            border-radius: 1rem;
+            box-shadow: 6px 6px 0 0 #E86A50;
+            /* Orange Shadow */
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card-kitsch:hover {
+            transform: translateY(-2px);
+            box-shadow: 8px 8px 0 0 #E86A50;
+        }
+
+        /* Button Style */
+        .btn-3d-kitsch {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Jua', sans-serif;
+            font-size: 1.125rem;
+            color: #4A4A4A;
+            background-color: #F29479;
+            border: 2px solid #4A4A4A;
+            border-radius: 0.5rem;
+            box-shadow: 4px 4px 0 0 #E86A50;
+            transition: all 0.15s ease-out;
+            cursor: pointer;
+        }
+
+        .btn-3d-kitsch:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 0 #E86A50;
+        }
+
+        .btn-3d-kitsch:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0 0 #E86A50;
+        }
+    </style>
+</head>
+
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Navbar (Replicated structure for standalone functionality) -->
+    <header class="bg-[#F7EFE5] border-b-2 border-[#F29479] sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <!-- Fallback to emoji if image fails in preview -->
+                <span class="text-3xl">🎨</span>
+                <span class="font-jua text-3xl text-[#E86A50]">Toneiverse</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">홈</a>
+                <a href="index.html#features" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">주요
+                    기능</a>
+                <a href="team.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">팀원 소개</a>
+                <a href="links.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">자료 모음</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-[#E86A50] focus:outline-none">
+                <span class="text-3xl">☰</span>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
+            <a href="index.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">홈</a>
+            <a href="team.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">팀원 소개</a>
+            <a href="links.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">자료 모음</a>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-5xl">
+
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-jua text-[#E86A50] mb-4">
+                ⚠️ 저작권 및 사용 제한 고지
+            </h1>
+            <p class="text-lg text-gray-600 font-medium">
+                Toneiverse 앱과 소스코드의 올바른 사용을 위한 가이드라인입니다.
+            </p>
+        </div>
+
+        <!-- Core Copyright Alert -->
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-xl p-6 mb-12 shadow-md text-center">
+            <p class="text-xl font-bold text-gray-800 mb-2">
+                Copyright © 2025 안영진. All Rights Reserved.
+            </p>
+            <p class="text-gray-600">
+                본 저작권은 전적으로 개발자 <strong>안영진</strong>에게 귀속되며,<br class="hidden md:block">
+                본 고지문에 명시된 범위를 제외하고는 별도의 라이선스를 따르지 않습니다.
+            </p>
+            <button id="copy-notice-btn"
+                class="mt-4 text-sm bg-yellow-200 hover:bg-yellow-300 text-yellow-800 py-1 px-3 rounded-full font-bold transition-colors">
+                📋 저작권 문구 복사하기
+            </button>
+        </div>
+
+        <!-- Permitted vs Prohibited Lists (Grid Layout) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            <!-- Permitted Use -->
+            <div class="bg-white border-2 border-green-500 rounded-xl p-6 shadow-[4px_4px_0_0_#22c55e]">
+                <div class="flex items-center mb-4 border-b pb-2 border-green-100">
+                    <span class="text-2xl mr-2">✅</span>
+                    <h3 class="font-jua text-xl text-green-700">허가된 사용 범위 (무료)</h3>
+                </div>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>교육 및 강의:</strong> 경복대 빅데이터과 교수님 및 관련 강의 자료 활용 (출처 명시 필수).
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>타과 교수님 특별 허가:</strong> 경복대 빅데이터과 23학번을 지도하셨으며, 제작자, 경복대 빅데이터학과 교수랑 함께 식사를 하신 타과 교수님의
+                            강의 자료 활용.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>무보수(무수익) 강의:</strong> 강사가 해당 강의를 통해 강의료, 자문료 등 어떠한 금전적 이익도 취하지 않는 경우 (사전 허락 불필요).
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>소외계층 무료 봉사 강의:</strong> 보육원, 양로원 등 사회 취약 계층을 대상으로 하는 <strong>완전 무료 봉사 강의</strong>
+                            (자유 사용).
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>학생 과제 및 캡스톤:</strong> 캡스톤 디자인, 졸업작품 등 학생 프로젝트에서 <strong>'Toneiverse 클론
+                                코딩'</strong>임을 명확히 밝히는 경우 (사전 허락 불필요).
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>개인 학습:</strong> 개인적인 연구 및 코드 분석 목적의 참고.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-green-500">✔</span>
+                        <span>
+                            <strong>오픈소스 기여:</strong> 비영리 목적의 기술적 기여 (PR).
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Prohibited Use -->
+            <div class="bg-white border-2 border-red-500 rounded-xl p-6 shadow-[4px_4px_0_0_#ef4444]">
+                <div class="flex items-center mb-4 border-b pb-2 border-red-100">
+                    <span class="text-2xl mr-2">❌</span>
+                    <h3 class="font-jua text-xl text-red-600">엄격히 금지되는 행위</h3>
+                </div>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-red-500">⛔</span>
+                        <span>
+                            <strong>상업적 이용:</strong> 모든 기관 및 개인의 영리 목적 사용 불가. (유료 강의, 수익 창출형 유튜브 포함)
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-red-500">⛔</span>
+                        <span>
+                            <strong>무단 배포:</strong> 코드를 수정하여 별도의 앱, 웹, 프로그램 등으로 재배포하는 행위.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1 text-red-500">⛔</span>
+                        <span>
+                            <strong>무단 복제:</strong> 허가 범위를 벗어난 복사 및 사용.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Conditional Paid License (Hybrid Model) -->
+        <div class="bg-blue-50 border-2 border-blue-500 rounded-xl p-6 mb-12 shadow-[4px_4px_0_0_#3b82f6]">
+            <div class="flex items-center mb-4">
+                <span class="text-2xl mr-2">💰</span>
+                <h3 class="font-jua text-xl text-blue-800">조건부 유료 라이선스 (예외 조항)</h3>
+            </div>
+            <p class="text-gray-700 mb-4 font-bold">
+                위의 무료 허가 조건(무보수, 학생, 봉사 등)에 해당하지 않으며, 강의료 등 수익이 발생하는 경우:
+            </p>
+            <div class="bg-white p-4 rounded-lg border border-blue-200">
+                <ul class="list-disc list-inside text-gray-700 space-y-3">
+                    <li class="border-b border-gray-100 pb-2">
+                        <strong>사전 고지 의무:</strong> 사용 전 반드시 제작자에게 이메일로 Toneiverse 활용 사실을 통보해야 합니다.
+                    </li>
+
+                    <!-- Hybrid Pricing Structure -->
+                    <li class="flex flex-col md:flex-row md:items-center">
+                        <span class="font-bold w-32">🔹 시간당 요금:</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold">30,000원</span>
+                        <span class="text-sm text-gray-500 ml-2">(1~6시간 미만 단기 강의 시 유리)</span>
+                    </li>
+                    <li class="flex flex-col md:flex-row md:items-center">
+                        <span class="font-bold w-32">🔹 1일 상한선:</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded font-bold">200,000원</span>
+                        <span class="text-sm text-gray-500 ml-2">(7시간 이상 사용 시 자동 적용, 전일 할인)</span>
+                    </li>
+
+                    <li class="text-sm text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                        * 사전 협의 없이 사용하다 적발될 경우, 위약금을 포함하여 통상 비용의 3배를 청구합니다.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Legal Consequences Section -->
+        <div
+            class="bg-red-50 border-2 border-red-700 rounded-xl p-8 mb-12 shadow-[6px_6px_0_0_#991b1b] relative overflow-hidden">
+            <!-- Warning Icon Background -->
+            <div class="absolute -right-10 -top-10 text-9xl text-red-100 opacity-50 select-none pointer-events-none">⚖️
+            </div>
+
+            <h3 class="font-jua text-2xl text-red-800 mb-6 flex items-center relative z-10">
+                <span class="mr-2">⚖️</span> 위반 시 법적 제재 및 불이익
+            </h3>
+
+            <p class="text-red-900 font-bold mb-6 text-lg border-l-4 border-red-600 pl-4 relative z-10">
+                본 고지문에 명시된 허용 범위를 벗어난 무단 사용, 배포, 상업적 이용이 적발될 경우, 별도의 경고 조치 없이 즉시 다음과 같은 강력한 법적 절차가 진행됩니다.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                <div>
+                    <h4 class="font-bold text-red-950 mb-3 text-lg border-b border-red-200 pb-1">1. 민사상 손해배상 청구</h4>
+                    <ul class="list-disc list-outside ml-5 text-red-900 space-y-2 text-sm leading-relaxed">
+                        <li>
+                            <strong>저작권법 제125조(손해배상의 청구)</strong>에 의거하여, 무단 사용으로 인해 발생한 저작재산권자의 모든 경제적 손해에 대해 배상을 청구합니다.
+                        </li>
+                        <li>
+                            침해자가 그 권리의 행사로 통상 받을 수 있는 금액에 상당하는 액수뿐만 아니라, 침해 행위로 인해 얻은 <strong>이익 전액</strong>을 손해액으로 추정하여
+                            청구합니다.
+                        </li>
+                        <li>
+                            또한, 이로 인한 브랜드 이미지 손상 등 <strong>정신적 피해에 대한 위자료</strong>가 별도로 청구될 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-red-950 mb-3 text-lg border-b border-red-200 pb-1">2. 형사 고소 및 처벌</h4>
+                    <ul class="list-disc list-outside ml-5 text-red-900 space-y-2 text-sm leading-relaxed">
+                        <li>
+                            <strong>저작권법 제136조(벌칙)</strong>에 따라, 저작재산권을 복제, 배포, 전시 등의 방법으로 침해한 자는 <strong>5년 이하의 징역 또는
+                                5천만 원 이하의 벌금</strong>에 처해질 수 있습니다.
+                        </li>
+                        <li>
+                            이는 친고죄에 해당하나, 영리를 목적으로 하거나 상습적인 침해 행위가 인정될 경우, 합의 여부와 관계없이 처벌될 수 있습니다.
+                        </li>
+                        <li>
+                            학교 및 기관 내에서의 무단 사용 적발 시, 해당 기관의 윤리 위원회에 <strong>연구 윤리 위반(표절)</strong>으로 제소될 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Contribution Section -->
+        <div class="card-kitsch p-8 mb-12">
+            <h3 class="font-jua text-2xl text-[#E86A50] mb-4 flex items-center">
+                <span class="mr-2">💻</span> 기술적 기여 가이드라인 (GitHub PR)
+            </h3>
+            <p class="mb-4 text-gray-700">
+                Toneiverse는 개발자들의 건전한 학습과 성장을 응원합니다. 코드를 분석하고 개선하고 싶으신가요? <br>
+                다음 규칙을 준수한다면 Pull Request(PR)는 언제나 환영합니다!
+            </p>
+
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <h4 class="font-bold text-gray-800 mb-2">Contribution Rules:</h4>
+                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                    <li>버그 수정, 알고리즘 개선, 리팩토링 목적이어야 합니다.</li>
+                    <li><strong>반드시 출처를 명시</strong>해야 합니다.</li>
+                    <li>제출된 코드의 저작권은 원저작자(안영진)에게 귀속됨에 동의하는 것으로 간주합니다.</li>
+                    <li>리포지토리(Repository) 포크(Fork) 및 학습용 저장소 업로드는 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="text-center">
+            <a href="mailto:an0jin0106@gmail.com" class="btn-3d-kitsch">
+                📩 라이선스 관련 문의하기
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer (Matching index.html) -->
+    <footer class="bg-[#F7EFE5] border-t border-[#F29479] py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center text-gray-500 font-bold">
+            &copy; 2025 Toneiverse. AI 소셜 뷰티앱.
+        </div>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Clipboard Copy Logic
+            const copyBtn = document.getElementById('copy-notice-btn');
+            copyBtn.addEventListener('click', () => {
+                const textToCopy = "Copyright © 2025 안영진. All Rights Reserved. 출처 명시 필수.";
+
+                // Fallback for clipboard API issues in some iframes
+                const textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const originalText = copyBtn.innerText;
+                    copyBtn.innerText = "✅ 복사 완료!";
+                    copyBtn.classList.remove('bg-yellow-200', 'text-yellow-800');
+                    copyBtn.classList.add('bg-green-500', 'text-white');
+
+                    setTimeout(() => {
+                        copyBtn.innerText = originalText;
+                        copyBtn.classList.add('bg-yellow-200', 'text-yellow-800');
+                        copyBtn.classList.remove('bg-green-500', 'text-white');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Copy failed', err);
+                    alert('복사에 실패했습니다. 수동으로 복사해주세요.');
+                }
+                document.body.removeChild(textArea);
+            });
+
+            // 2. Mobile Menu Logic
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
