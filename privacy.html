@@ -9,10 +9,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap"
         rel="stylesheet">
-    <!-- Chosen Palette: Retro Peach & Coral (Main Background: #F7EFE5, Accent: #F29479, Shadow: #E86A50) -->
-    <!-- Application Structure Plan: Single-page static informational document. Replicates the existing `index.html` header/footer for brand consistency. The main content is structured as a clear, legible privacy policy using styled cards for readability, directly addressing the user's points about photo and email data handling. -->
-    <!-- Visualization & Content Choices: No visualizations needed. Content is 100% text. Structure: Standard privacy policy sections (Collection, Purpose, Retention/Destruction) presented in styled HTML/Tailwind cards. Content directly translates the user's Python code logic (in-memory processing for photos, `DELETE` SQL on user removal) into simple, user-facing Korean text. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,43 +30,53 @@
                     <div class="space-y-8">
                         <div>
                             <h2 class="text-2xl font-jua text-[#F29479] mb-3">1. 수집하는 개인정보 항목 및 이용 목적</h2>
-                            <p class="text-gray-700 mb-4">회사는 서비스 제공을 위해 필요한 최소한의 개인정보만을 수집하며, 수집 목적 이외의 용도로는 사용하지 않습니다.
-                            </p>
+                            <p class="text-gray-700 mb-4">회사는 서비스 제공을 위해 필요한 최소한의 개인정보만을 수집하며, 고지된 목적 이외의 용도로는 사용하지
+                                않습니다.</p>
                             <ul class="list-none space-y-4 pl-0">
                                 <li class="bg-orange-50 p-4 rounded-lg border-l-4 border-[#F29479]">
-                                    <h3 class="font-bold text-lg text-gray-800">가. 얼굴 사진 (필수)</h3>
-                                    <p class="text-gray-600 mt-1"><span class="font-semibold">이용 목적:</span> 퍼스널 컬러 진단
-                                    </p>
-                                    <p class="text-gray-600 mt-1"><span class="font-semibold">보유 및 파기:</span> 사용자가 업로드한
-                                        얼굴 사진은 퍼스널 컬러 진단(AI 분석)을 위해서만 실시간으로 이용됩니다. <strong>진단 결과가 사용자에게 제공되는 즉시, 서버에
-                                            저장되지 않고 즉각 파기됩니다.</strong></p>
+                                    <h3 class="font-bold text-lg text-gray-800">가. 얼굴 이미지 데이터 (임시 처리)</h3>
+                                    <p class="text-gray-600 mt-1"><span class="font-semibold">이용 목적:</span> AI 기반 퍼스널 컬러
+                                        추론 및 진단</p>
+                                    <p class="text-gray-600 mt-1"><span class="font-semibold">보유 및 파기:</span> 사용자가 전송한
+                                        사진은 서버 메모리상에서 실시간 분석용으로만 사용되며, <strong>분석 완료 즉시 디스크에 저장되지 않고 휘발성 메모리에서 즉각
+                                            파기됩니다.</strong></p>
                                 </li>
                                 <li class="bg-orange-50 p-4 rounded-lg border-l-4 border-[#F29479]">
-                                    <h3 class="font-bold text-lg text-gray-800">나. 이메일 (필수)</h3>
-                                    <p class="text-gray-600 mt-1"><span class="font-semibold">이용 목적:</span> 회원 식별 및 비밀번호
-                                        찾기 기능 제공</p>
+                                    <h3 class="font-bold text-lg text-gray-800">나. 회원 식별 정보 (필수)</h3>
+                                    <p class="text-gray-600 mt-1"><span class="font-semibold">수집 항목:</span> 이메일,
+                                        닉네임(이름), 암호화된 비밀번호</p>
+                                    <p class="text-gray-600 mt-1"><span class="font-semibold">이용 목적:</span> 서비스 가입/탈퇴
+                                        처리, 본인 식별, 비밀번호 찾기 지원</p>
+                                </li>
+                                <li class="bg-orange-50 p-4 rounded-lg border-l-4 border-[#F29479]">
+                                    <h3 class="font-bold text-lg text-gray-800">다. 진단 결과 및 서비스 이용 기록 (필수)</h3>
+                                    <p class="text-gray-600 mt-1"><span class="font-semibold">수집 항목:</span> 퍼스널 컬러 진단
+                                        결과(Color ID), 추천 및 선택된 제품 색상 정보(Hex Code), 채팅 메시지 내역</p>
+                                    <p class="text-gray-600 mt-1"><span class="font-semibold">이용 목적:</span> 개인 맞춤형 AR
+                                        메이크업 서비스 제공, AI 뷰티 컨설팅 연속성 유지, 동일 톤 그룹 내 실시간 소통 지원</p>
                                     <p class="text-gray-600 mt-1"><span class="font-semibold">보유 및 파기:</span>
-                                        <strong>사용자가 회원 탈퇴를 요청하는 즉시, 해당 이메일 정보는 데이터베이스에서 완전히 삭제되어 복구할 수 없습니다.</strong>
-                                    </p>
+                                        <strong>사용자가 회원 탈퇴를 요청하기 전까지 보관되며, 탈퇴 즉시 데이터베이스에서 영구 삭제됩니다.</strong></p>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
                             <h2 class="text-2xl font-jua text-[#F29479] mb-3">2. 개인정보의 보유 기간 및 파기</h2>
-                            <p class="text-gray-700 mb-4">회사는 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 파기 절차 및 방법은
+                            <p class="text-gray-700 mb-4">회사는 이용 목적이 달성되거나 사용자가 삭제를 요청한 경우 정보를 지체 없이 파기합니다. 파기 절차 및 방법은
                                 다음과 같습니다.</p>
                             <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                <li><strong>얼굴 사진:</strong> 퍼스널 컬러 진단 완료 즉시, 서버에 저장하지 않고 파기합니다.</li>
-                                <li><strong>이메일:</strong> 회원 탈퇴 시, 데이터베이스에서 즉시 삭제합니다.</li>
+                                <li><strong>얼굴 사진:</strong> 분석 프로세스 종료 즉시 서버 메모리에서 완전 삭제 (디스크 저장 안 함)</li>
+                                <li><strong>진단 결과 및 활동 기록:</strong> 회원 탈퇴 시 'user' 및 'chat' 테이블의 관련 레코드를 즉시 삭제하여 복구 불가능한
+                                    상태로 처리</li>
+                                <li><strong>계정 정보:</strong> 회원 탈퇴 시 즉시 파기</li>
                             </ul>
                         </div>
 
                         <div>
                             <h2 class="text-2xl font-jua text-[#F29479] mb-3">3. 이용자의 권리</h2>
                             <p class="text-gray-700">
-                                이용자는 언제든지 앱 내 '회원 탈퇴' 기능을 통해 개인정보(이메일)의 처리를 중지하고 계정을 삭제할 수 있습니다. 탈퇴 즉시 모든 정보는 파기 방침에 따라
-                                처리됩니다.
+                                이용자는 언제든지 앱 내 '회원 탈퇴' 기능을 통해 개인정보의 처리를 중지하고 계정을 삭제할 수 있습니다. 탈퇴 시 수집된 모든 파생 데이터는 즉시
+                                파기됩니다.
                             </p>
                         </div>
 
@@ -85,7 +91,7 @@
 
                         <div class="pt-4 border-t border-gray-200">
                             <p class="text-sm text-gray-500">
-                                <strong>시행 일자:</strong> 2025년 11월 10일
+                                <strong>시행 일자:</strong> 2025년 12월 29일 (개정)
                             </p>
                         </div>
                     </div>
@@ -99,25 +105,6 @@
             &copy; 2025 Toneiverse. AI 소셜 뷰티앱.
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
-    <script src="navbar.js"></script>
 
 </body>
 
