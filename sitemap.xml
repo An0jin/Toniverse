@@ -14,7 +14,21 @@
   </url>
   
   <url>
-    <loc>https://toneiverse.netlify.app/github</loc>
+    <loc>https://toneiverse.netlify.app/links</loc>
+    <lastmod>2025-12-29</lastmod> [cite: 113]
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://toneiverse.netlify.app/team</loc>
+    <lastmod>2025-12-29</lastmod> [cite: 113]
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://toneiverse.netlify.app/copyRight</loc>
     <lastmod>2025-12-29</lastmod> [cite: 113]
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
