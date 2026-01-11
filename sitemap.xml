@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://toneiverse.netlify.app/</loc>
+    <lastmod>2025-12-29</lastmod> <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://toneiverse.netlify.app/privacy</loc>
+    <lastmod>2025-12-29</lastmod> [cite: 192]
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://toneiverse.netlify.app/github</loc>
+    <lastmod>2025-12-29</lastmod> [cite: 113]
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
